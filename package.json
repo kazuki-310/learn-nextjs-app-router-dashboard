@@ -26,6 +26,12 @@
     "@types/bcrypt": "^5.0.2",
     "@types/node": "22.10.1",
     "@types/react": "19.0.0",
-    "@types/react-dom": "19.0.0"
+    "@types/react-dom": "19.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-tailwindcss": "^3.17.5",
+    "prettier": "^3.4.2",
+    "prettier-plugin-organize-imports": "^4.1.0"
   }
 }
