@@ -5,7 +5,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useQueryState } from 'nuqs'
-import { useCallback, useMemo } from 'react'
+import { useMemo } from 'react'
 
 export default function Pagination({ totalPages }: { totalPages: number }) {
   const [page, setPage] = useQueryState('page', {
@@ -17,9 +17,9 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
     [currentPage, totalPages],
   )
 
-  const createPageURL = useCallback((pageNumber: number | string) => {
+  const createPageURL = (pageNumber: number | string) => {
     return `?page=${pageNumber}`
-  }, [])
+  }
 
   const handlePageChange = (pageNumber: number | string) => {
     setPage(pageNumber.toString())
