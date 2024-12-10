@@ -4,7 +4,10 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import { useQueryState } from 'nuqs'
 
 export default function Search({ placeholder }: { placeholder: string }) {
-  const [query, setQuery] = useQueryState('query')
+  const [query, setQuery] = useQueryState('query', {
+    shallow: false,
+    throttleMs: 500,
+  })
 
   return (
     <div className="relative flex flex-1 flex-shrink-0">
